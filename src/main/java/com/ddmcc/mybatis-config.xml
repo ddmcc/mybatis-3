@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="localCacheScope" value="STATEMENT"/>
+    </settings>
+    <environments default="development">
+        <!-- environment 节点包含事务管理器和数据源的配置 -->
+        <environment id="development">
+            <transactionManager type="JDBC">
+                <property name="" value="" />
+            </transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://47.107.135.196:3306/user?characterEncoding=utf-8" />
+                <property name="username" value="job" />
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- mappers -->
+    <mappers>
+       <!-- <mapper class="com.ddmcc.UserMapper" />-->
+        <package name="com.ddmcc"/>
+    </mappers>
+
+</configuration>
